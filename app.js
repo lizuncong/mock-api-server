@@ -13,13 +13,16 @@ router.get('/', function(req, res) {
   res.send('home')
 })
 
+// get请求通过req.query获取参数
+// post请求通过req.body获取参数
 router.get('/product/list', function(req, res){
+  console.log('req...', req.body, req.query)
   res.send({
     code: 0,
     msg: 'success',
     data: [
       {
-        title: '标题1',
+        title: `标题${req.query.id}`,
         value: 'hahahah'
       }
     ]
