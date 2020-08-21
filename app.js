@@ -22,7 +22,7 @@ router.get('/product/list', function(req, res){
     msg: 'success',
     data: [
       {
-        title: `标题${req.query.id}`,
+        title: `标\n题${req.query.id}`,
         value: 'hahahah'
       }
     ]
