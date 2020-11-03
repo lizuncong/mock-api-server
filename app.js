@@ -1,9 +1,10 @@
 const express = require('express');
-
+const path = require('path');
 const app = express();
 
 const router = express.Router()
 
+app.use('/static', express.static(path.resolve(__dirname, 'public')))
 
 app.use(express.json());
 
